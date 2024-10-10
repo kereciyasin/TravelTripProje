@@ -1,4 +1,6 @@
-﻿
+﻿@using TravelTripProje.Models.Classes
+@model List<About>
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_TestLayout.cshtml";
@@ -17,12 +19,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <div class="wrap">
         <div class="about">
             <h3>About</h3>
-            <img src="~/web/images/about_banner.jpg" alt="" />
-            <p>Loreim Yasin </p>
+            <!-- Resmi eklemek icin ise foreach dongusu kullanilir -->
+            @foreach (var item in Model)
+            {
+                <img src="@item.FotoUrl" alt="" />
+                
 
+
+                <p>@item.Description</p>
+             }
+
+
+            </div>
         </div>
     </div>
-</div>
 
 
 
