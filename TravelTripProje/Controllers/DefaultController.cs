@@ -8,7 +8,7 @@ namespace TravelTripProje.Controllers
 {
     public class DefaultController : Controller
     {
-        // GET: Default
+        
         public ActionResult Index()
         {
             return View();
@@ -16,6 +16,7 @@ namespace TravelTripProje.Controllers
 
         public ActionResult About()
         {
+               
             return View();
         }
     }
