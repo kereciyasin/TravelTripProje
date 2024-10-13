@@ -17,5 +17,10 @@ namespace TravelTripProje.Controllers
             return View(bloglar);
 
         }
+
+        public ActionResult BlogDetay(int id)
+        {
+            return View();
+        }
     }
 }
