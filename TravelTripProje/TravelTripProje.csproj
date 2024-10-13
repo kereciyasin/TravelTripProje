@@ -151,6 +151,7 @@
     <Content Include="blog\css\bootstrap.css" />
     <Content Include="blog\css\style.css" />
     <Content Include="blog\images\avatar.png" />
+    <Content Include="blog\images\food.jpg" />
     <Content Include="blog\images\icon3.png" />
     <Content Include="blog\images\logo.jpg" />
     <Content Include="blog\images\man.jpg" />
