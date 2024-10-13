@@ -22,7 +22,7 @@ namespace TravelTripProje.Controllers
         {
 
             by.Value1 = c.Blogs.Where(x => x.BlogId == id).ToList();
-            //by.Value2 = c.Comments.Where(x => x.BlogId == id).ToList();
+            by.Value2 = c.Comments.Where(x => x.BlogId == id).ToList();
             return View(by);
         }
     }
