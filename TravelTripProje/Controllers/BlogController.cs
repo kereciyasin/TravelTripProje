@@ -11,13 +11,16 @@ namespace TravelTripProje.Controllers
     public class BlogController : Controller
     {
         Context c = new Context();
+        BlogComment by = new BlogComment();
         public ActionResult Index()
         {
-            var bloglar = c.Blogs.ToList();
-            return View(bloglar);
+            //var bloglar = c.Blogs.ToList();
+            by.Value1 = c.Blogs.ToList();
+            by.Value3 = c.Blogs.OrderByDescending(x => x.BlogId).Take(3).ToList();  
+            return View(by);
 
         }
-        BlogComment by = new BlogComment();
+
         public ActionResult BlogDetay(int id)
         {
 
