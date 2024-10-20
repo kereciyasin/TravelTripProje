@@ -1,34 +1,40 @@
-﻿<div class="con-bot">
-    <div class="left">
-        <div class="bot-left">
-            <img src="~/web/images/pc" alt="" />
-        </div>
-        <div class="left-text">
-            <h4> Lorem </h4>
-            <span class="doller">$1024.99</span>
-            <p>burasi paragraf</p>
-        </div>
-    </div>
-    <div class="left">
-        <div class="bot-left">
-            <img src="~/web/images/pc" alt="" />
-        </div>
-        <div class="left-text">
-            <h4> Lorem </h4>
-            <span class="doller">$1024.99</span>
-            <p>burasi paragraf</p>
-        </div>
-    </div>
-    <div class="left">
-        <div class="bot-left">
-            <img src="~/web/images/pc" alt="" />
-        </div>
-        <div class="left-text">
-            <h4> Lorem </h4>
-            <span class="doller">$1024.99</span>
-            <p>burasi paragraf</p>
-        </div>
-    </div>
+﻿@using TravelTripProje.Models.Classes
+@model List<Blog>
 
-    <div class="clear"></div>
+
+
+<div class="con-bot">
+
+    @foreach (var x in Model)
+    {
+
+        <div class="left">
+            <div class="bot-left">
+                <img src="~/web/images/pic.jpg" alt="" />
+            </div>
+            <div class="left-text">
+                <h4> @x.Title </h4>
+                <span class="doller">@x.Date</span>
+                <p>Aciklama Gelecek</p>
+                <p> <a href="~/blog/BlogDetay/@x.BlogId"> <span class="read">Devamini Oku >></span> </a> </p>
+            </div>
+        </div>
+    }
+
 </div>
+
+@*<div class="left">
+        <div class="bot-left">
+            <img src="~/web/images/pic2.jpg" alt="" />
+        </div>
+        <div class="left-text">
+            <h4> Lorem </h4>
+            <span class="doller">$1024.99</span>
+            <p>burasi paragraf</p>
+        </div>
+    </div>*@
+
+<div class="clear"></div>
+
+  </div>
+

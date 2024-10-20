@@ -23,7 +23,8 @@ namespace TravelTripProje.Controllers
         }
         public PartialViewResult Partial1()
         {
-            return PartialView();
+            var values = Context.Blogs.OrderByDescending(x => x.BlogId).Take(2).ToList();   
+            return PartialView(values);
         }   
     }
 }
