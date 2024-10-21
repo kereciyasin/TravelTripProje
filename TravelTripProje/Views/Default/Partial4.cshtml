@@ -10,12 +10,10 @@
                 <img src="@item.BlogImage" alt="" />
             </div>
             <div class="bot-desc">
-                <p> <a href="~/blog/BlogDetay/@item.BlogId">content</a> @item.Description.Substring(0, 75)...</p>
+                <p> <a href="~/blog/BlogDetay/@item.BlogId">@item.Description.Substring(0, 75)...</a> </p>
             </div>
             <div class="clear"></div>
         }
     </div>
-
-
-   
+    @Html.Action("Partial5", "Default")
 </div>
