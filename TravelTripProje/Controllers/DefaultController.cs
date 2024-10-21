@@ -15,7 +15,6 @@ namespace TravelTripProje.Controllers
             var values = Context.Blogs.Take(4).ToList();    
             return View(values);
         }
-
         public ActionResult About()
         {
                
@@ -31,8 +30,19 @@ namespace TravelTripProje.Controllers
             var values = Context.Blogs.Where(x => x.BlogId == 1).ToList();
             return PartialView(values);
         }
-        public PartialViewResult Partial3() {
+        public PartialViewResult Partial3() 
+        {
             var values = Context.Blogs.Take(10).ToList();
+            return PartialView(values);
+        }
+        public PartialViewResult Partial4()
+        {
+            var values = Context.Blogs.Take(3).ToList();
+            return PartialView(values);
+        }
+        public PartialViewResult Partial5()
+        {
+            var values = Context.Blogs.OrderByDescending(3).ToList();
             return PartialView(values);
         }   
     }
