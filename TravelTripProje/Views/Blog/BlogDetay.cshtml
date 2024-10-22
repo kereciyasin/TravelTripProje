@@ -62,15 +62,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     </ul>
                 }
 
-                <div class="content-form">
-                    <h3>Leave a comment</h3>
-                    <form>
-                        <input type="text" placeholder="Kullanici Adi" required />
-                        <input type="text" placeholder="Mail Adresi" required />
-                        <textarea placeholder="Yorum"></textarea>
-                        <input type="submit" value="Gönder" />
-                    </form>
-                </div>
+                @Html.Action("AddComment", "Blog")
             </div>
         </div>
 
