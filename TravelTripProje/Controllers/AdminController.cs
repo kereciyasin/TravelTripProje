@@ -17,5 +17,18 @@ namespace TravelTripProje.Controllers
             var values = c.Blogs.ToList();
             return View(values);
         }
+        [HttpGet]   
+        public ActionResult AddBlog()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult AddBlog(Blog p)
+        {
+            c.Blogs.Add(p);
+            c.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
     }
 }
