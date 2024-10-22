@@ -4,22 +4,25 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>AddBlog</h2>
+<h2>Yeni Blog Ekle</h2>
 
 <br />
 
 <form class="form-group" method="post">
     @Html.LabelFor(x => x.Title)
     @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
-
+    <br />
     @Html.LabelFor(x => x.Date)
     @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
-
+    <br />
     @Html.LabelFor(x => x.BlogImage)
     @Html.TextBoxFor(x => x.BlogImage, new { @class = "form-control" })
-
+    <br />
     @Html.LabelFor(x => x.Description)
     @Html.TextAreaFor(x => x.Description, new { @class = "form-control" })
+
+    <br />
+    <button class="btn btn-primary">Blog Ekle</button>
 
 </form>
 
