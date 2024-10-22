@@ -36,10 +36,23 @@ namespace TravelTripProje.Controllers
             c.SaveChanges();
             return RedirectToAction("Index");
         }
-        public ActionResult UpdateBlog(int id)
+
+        public ActionResult GetBlog(int id)
         {
             var blog = c.Blogs.Find(id);
-            return View("UpdateBlog", blog);
+            return View("GetBlog", blog);
         }
+            
+        public ActionResult UpdateBlog(Blog id)
+        {
+            var bl = c.Blogs.Find(id.BlogId);
+            bl.Description = id.Description;
+            bl.Title = id.Title;
+            bl.BlogImage = id.BlogImage;
+            bl.Date = id.Date;
+            c.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
     }
 }
