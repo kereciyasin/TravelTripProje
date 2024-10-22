@@ -29,6 +29,18 @@ namespace TravelTripProje.Controllers
             c.SaveChanges();
             return RedirectToAction("Index");
         }
+        public ActionResult DeleteBlog(int id)
+        {
+            var blog = c.Blogs.Find(id);
+            c.Blogs.Remove(blog);
+            c.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        public ActionResult GetBlog(int id)
+        {
+            var blog = c.Blogs.Find(id);
+            return View("GetBlog", blog);
+        }
 
     }
 }
