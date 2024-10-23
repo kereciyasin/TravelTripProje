@@ -36,8 +36,10 @@ namespace TravelTripProje.Controllers
             return PartialView();
         }
         [HttpGet]
-        public PartialViewResult AddComment()
+        public PartialViewResult AddComment(int id)
         {
+            ViewBag.deger = id; 
+
             return PartialView();
         }
 
