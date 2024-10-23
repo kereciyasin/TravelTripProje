@@ -43,6 +43,7 @@ namespace TravelTripProje.Controllers
             return PartialView();
         }
 
+
         [HttpPost]
         public PartialViewResult AddComment(Comment comment)
         {
